@@ -229,14 +229,14 @@ public OnPlayerConnect(playerid)
    		ResetInventoryInfo(playerid);
    		ResetAllowanceInfo(playerid);
 	    RemoveMaps(playerid);
-	    //CancelSelectTextDraw(playerid);
+	    CancelSelectTextDraw(playerid);
 	    LoadPlayerTextDraws(playerid);
 	    ClearInfoBoxData(playerid);
 	    ResetInventoryInfo(playerid);
 	    CleanPlayerLoginData(playerid);
-	  //  ResetPlayerAttachments(playerid);
+	    ResetPlayerAttachments(playerid);
 		SetTimerEx("OnPlayerConnected", 100, false, "i", playerid);
-		//EnablePlayerCameraTarget(playerid, 1);
+	        EnablePlayerCameraTarget(playerid, 1);
 	}
 	else
 		OnPlayerSpawn(playerid);
