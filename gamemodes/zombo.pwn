@@ -255,10 +255,9 @@ fp OnPlayerConnected(playerid)
 
 	SetTimerEx("OnPlayerInterpolate", 7000, false, "i", playerid);
 
-	SendClientMessage(playerid, -1, ""); SendClientMessage(playerid, -1, ""); SendClientMessage(playerid, -1, ""); SendClientMessage(playerid, -1, "");
-	SendClientMessage(playerid, -1, ""); SendClientMessage(playerid, -1, ""); SendClientMessage(playerid, -1, ""); SendClientMessage(playerid, -1, "");
-	SendClientMessage(playerid, -1, ""); SendClientMessage(playerid, -1, ""); SendClientMessage(playerid, -1, ""); SendClientMessage(playerid, -1, "");
-	SendClientMessage(playerid, -1, ""); SendClientMessage(playerid, -1, ""); SendClientMessage(playerid, -1, ""); SendClientMessage(playerid, -1, "");
+	for ( new i = 0; i < 16; i++ ) {
+		SendClientMessage( playerid, -1, "" );
+	}
 
 	return true;
 }
