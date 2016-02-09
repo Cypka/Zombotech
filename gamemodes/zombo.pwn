@@ -226,13 +226,13 @@ public OnPlayerConnect(playerid)
 		SetPlayerName(playerid, str);
 		PreloadAnimations(playerid);
 		PlayerLoginInfo[playerid][FirstSpawn] = true;
-   		ResetInventoryInfo(playerid);
+   		//ResetInventoryInfo(playerid); 1st
    		ResetAllowanceInfo(playerid);
 	    RemoveMaps(playerid);
 	    CancelSelectTextDraw(playerid);
 	    LoadPlayerTextDraws(playerid);
 	    ClearInfoBoxData(playerid);
-	    ResetInventoryInfo(playerid);
+	    ResetInventoryInfo(playerid); // Second
 	    CleanPlayerLoginData(playerid);
 	    ResetPlayerAttachments(playerid);
 		SetTimerEx("OnPlayerConnected", 100, false, "i", playerid);
